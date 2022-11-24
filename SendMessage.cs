@@ -19,12 +19,14 @@ namespace Exception_Constructors
 				Console.WriteLine($"Message Sent to {phoneNumber} Successfully");
 			}catch(NotNullException ex)
 			{
-					Console.WriteLine(ex.ToString());
+					Console.WriteLine($"Message: {ex.Message}");
+				   Messenger();
 			}
 			catch (Exception exception )
 			{
-				Console.WriteLine(exception.ToString());
-			} }
+				Console.WriteLine($"Message: {exception.Message}");
+                Messenger();
+            } }
 
 
 		long FormatNumber(string number)

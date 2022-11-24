@@ -6,7 +6,9 @@
 
         public NotNullException() : base(message)
         { }
-        public NotNullException(string infoMessage, Exception innerException) : base(String.Format($"{message}, {infoMessage}.", innerException))
+        public NotNullException(string errorMessage):base($"Error : {message}, {errorMessage}") { }
+        public NotNullException(string infoMessage, Exception innerException) : base(String.Format($"Error : {message}, {infoMessage}. {innerException}"))
         { }
+
     }
 }
